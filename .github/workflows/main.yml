@@ -1,0 +1,12 @@
+name: 生成包和二进制文件
+
+#run-name: ${{ github.actor }} is learning GitHub Actions
+
+on: [push]
+
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - run: python3 pkg.py
+      - run: ls .jcm/*

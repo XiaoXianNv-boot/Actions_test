@@ -14,3 +14,4 @@ git clone https://github.com/XiaoXianNv-boot/jcm
 cd jcm
 python3 server/jcm.py
 ```
+https://github.com/XiaoXianNv-boot/jcm/tree/master/.github/workflows
