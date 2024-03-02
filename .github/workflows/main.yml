@@ -16,6 +16,7 @@ jobs:
         run: ls .jcm/
       - name: up
         uses: softprops/action-gh-release@v1
+        tag_name: pkg
         with:
           files: |
             .jcm/pkg/Packages
