@@ -22,6 +22,6 @@ jobs:
           body: TODO New Release.
           draft: false
           prerelease: false
-        files: |
-            .jcm/*
+          files: |
+              .jcm/*
            
