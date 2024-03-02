@@ -8,9 +8,9 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - name: Build
+      - name: get
         uses: actions/checkout@v4
-        run: ls
+      - name: Build
         run: python3 pkg.py
         run: ls .jcm/*
       - name: up
