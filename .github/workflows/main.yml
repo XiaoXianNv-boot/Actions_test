@@ -16,13 +16,6 @@ jobs:
         run: ls .jcm/
       - name: up
         uses: softprops/action-gh-release@v1
-        if: true
-        with:
-          tag_name: jcm
-          name: Release jcm
-          body: TODO New Release.
-          draft: false
-          prerelease: false
-          files: |
-              .jcm/pkg/Packages
+        files: |
+          .jcm/pkg/Packages
            
