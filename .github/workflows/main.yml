@@ -8,18 +8,20 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: ls
-      - run: python3 pkg.py
-      - run: ls .jcm/*
-      - uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
-      with:
-        tag_name: jcm
-        name: Release jcm
-        body: TODO New Release.
-        draft: false
-        prerelease: false
-      files: |
-          .jcm/*
+      - name: Build
+        uses: actions/checkout@v4
+        run: ls
+        run: python3 pkg.py
+        run: ls .jcm/*
+      - name: up
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          tag_name: jcm
+          name: Release jcm
+          body: TODO New Release.
+          draft: false
+          prerelease: false
+        files: |
+            .jcm/*
            
