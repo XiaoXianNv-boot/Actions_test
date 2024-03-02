@@ -12,3 +12,7 @@ jobs:
       - run: ls
       - run: python3 pkg.py
       - run: ls .jcm/*
+      - uses: softprops/action-gh-release@v1
+      files: |
+          .jcm/*
+           
