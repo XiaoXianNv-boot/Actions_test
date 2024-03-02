@@ -16,13 +16,11 @@ jobs:
         run: ls .jcm/*
       - name: up
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          tag_name: jcm
-          name: Release jcm
-          body: TODO New Release.
-          draft: false
-          prerelease: false
-          files: |
-              .jcm/*
-           
+        tag_name: jcm
+        name: Release jcm
+        body: TODO New Release.
+        draft: false
+        prerelease: false
+        files: |
+            .jcm/*
+          
