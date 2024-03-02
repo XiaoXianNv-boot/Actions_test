@@ -8,6 +8,7 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: ls
       - run: python3 pkg.py
       - run: ls .jcm/*
