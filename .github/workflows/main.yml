@@ -13,7 +13,7 @@ jobs:
       - name: Build
         run: python3 pkg.py
       - name: ls
-        run: ls .jcm/
+        run: cat /etc/issue
       - name: up
         uses: softprops/action-gh-release@v1
         if: true
